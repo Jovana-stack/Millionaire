@@ -7,14 +7,8 @@ package gui_Assignment;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import gamestates.Gamestate;
-<<<<<<< HEAD
-import java.awt.event.MouseMotionListener;
-
-public class MouseInput implements MouseListener,MouseMotionListener   {
-=======
 
 public class MouseInput implements MouseListener   {
->>>>>>> origin/main
 	private Panel panel;
 	
 	public MouseInput(Panel panel){
@@ -76,39 +70,4 @@ public class MouseInput implements MouseListener   {
 		
 	}
 
-<<<<<<< HEAD
-    @Override
-    public void mouseDragged(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-        switch(Gamestate.state) {
-                    case gameover:
-                            panel.getGame().getGameover().mouseMoved(e);
-                            break;
-                    case gamewin:
-                            panel.getGame().getGamewin().mouseMoved(e);
-                            break;
-                    case menu:
-                            panel.getGame().getMenu().mouseMoved(e);
-                            break;
-                    case playing:
-                            panel.getGame().getPlaying().mouseMoved(e);
-                            break;
-                    case fiftyfifty:
-                        panel.getGame().getfiftyfifty().mouseMoved(e);
-                        break;
-                    case continueoption:
-                        panel.getGame().getcontinueoption().mouseMoved(e);
-                        break;
-                    default:
-                        System.out.print("oh not shit is real");
-                        break;
-		}
-    }
-
-=======
->>>>>>> origin/main
 }

@@ -13,6 +13,7 @@ import gui_Assignment.Game;
 
 import static gui_Assignment.Game.framewidth;
 import static gui_Assignment.Game.framehight;
+<<<<<<< HEAD
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -20,12 +21,15 @@ import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+=======
+>>>>>>> origin/main
 
 //import static gui_Assignment.game.UNIT_SIZE;
 public class menu extends state implements statemethods {
 
 	// start button
 	// size
+<<<<<<< HEAD
 	private static int startButtonSizeX = 270;
 	private static int startButtonSizeY = 50;
 	// postion
@@ -40,6 +44,19 @@ public class menu extends state implements statemethods {
 	public menu(Game game) throws IOException {
             super(game);
                 this.menubackround = game.getMenubackround();
+=======
+	private static int startButtonSizeX = 200;
+	private static int startButtonSizeY = 50;
+	// postion
+	private static int startbuttonY = 425;
+	private static int startbuttonX = 350;
+	// text off set
+	private static int startTextY = 35;
+	private static int startTextX = 40;
+
+	public menu(Game game) {
+		super(game);
+>>>>>>> origin/main
 		// TODO Auto-generated constructor stub
 	}
 
@@ -48,6 +65,7 @@ public class menu extends state implements statemethods {
 		// TODO Auto-generated method stub
 
 	}
+<<<<<<< HEAD
         private void importimages(){
              // Specify the file path to the image you want to import
             File imageFile = new File("startgame.png");
@@ -73,6 +91,19 @@ public class menu extends state implements statemethods {
             int offset = centertext(g,new Font("Serif", Font.BOLD, 40),"start",900);
             g.drawString("start", offset, startbuttonY + startTextY);    
 		
+=======
+
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(Color.GRAY);
+		g.fillRect(startbuttonX, startbuttonY, startButtonSizeX, startButtonSizeY);
+		g.setColor(Color.BLACK);
+		g.setFont(new Font("Monospaced", Font.BOLD, 40));
+		g.drawString("start", startbuttonX + startTextX, startbuttonY + startTextY);
+		// g.fillRect((gui_Assignment.game.framewidth-startButtonSizeX)/2,
+		// (gui_Assignment.game.framehight - startButtonSizey)/2, startButtonSizeX,
+		// startButtonSizey);
+>>>>>>> origin/main
 
 	}
 
@@ -89,12 +120,16 @@ public class menu extends state implements statemethods {
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
+<<<<<<< HEAD
             this.startGlow = false;
 		if (e.getX() < startButtonSizeX + startbuttonX && e.getX() > startbuttonX) {
 			if (e.getY() < startButtonSizeY + startbuttonY && e.getY() > startbuttonY) {
 				this.startGlow = true;
 			}
 		}
+=======
+		// TODO Auto-generated method stub
+>>>>>>> origin/main
 
 	}
 
@@ -103,6 +138,7 @@ public class menu extends state implements statemethods {
 		// TODO Auto-generated method stub
 
 	}
+<<<<<<< HEAD
         public int centertext(Graphics g, Font f, String text, int sizeX) {
 		g.setFont(f);
 		int width = g.getFontMetrics().stringWidth(text);
@@ -110,4 +146,6 @@ public class menu extends state implements statemethods {
 
 		return offset;
 	}
+=======
+>>>>>>> origin/main
 }

@@ -4,28 +4,14 @@
  */
 package gui_Assignment;
 
-<<<<<<< HEAD
-import java.io.IOException;
-
-=======
->>>>>>> origin/main
 public class Millionaire_main {
 	
 	
 
-<<<<<<< HEAD
-	public static void main(String[] args) throws IOException {
-	
-	
-	new Game();
-        
-        
-=======
 	public static void main(String[] args) {
 	
 	
 	new Game();
->>>>>>> origin/main
 	
 	}
 	

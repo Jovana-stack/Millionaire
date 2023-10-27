@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package gui_Assignment;
 
 import java.io.FileWriter;
@@ -7,11 +6,11 @@ import java.io.IOException;
 public class user {
 
     private String name;
-    private int money;
+    private double money;
     private int userNumber;
 
     public user() {
-        this.money = 0;
+        this.money = 0.0;
          this.userNumber = 1; // Initialize user number to 1
         generateName();
         
@@ -25,19 +24,21 @@ public class user {
         this.name = name;
     }
 
-    public void setMoney(int money) {
+    public void setMoney(double money) {
         this.money = money;
     }
 
-    public int getMoney() {
+    public double getMoney() {
         return money;
     }
 
     public void saveUserDataToFile() {
         try {
-            try (FileWriter writer = new FileWriter("C:\\Users\\jovan\\Downloads\\gui_assignment_0.7\\gui_assignment_0.2\\gui_assignment_0.2\\test\\user_data", true)) {
-                writer.write(name + " " + money + System.lineSeparator());
-            }
+            FileWriter writer = new FileWriter("user_data.txt", true); 
+           
+            writer.write(name + " " + money + System.lineSeparator());
+
+            writer.close();
 
             System.out.println("User data saved to user_data.txt");
         } catch (IOException e) {
@@ -57,38 +58,4 @@ public class user {
 
       
     }
-=======
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package gui_Assignment;
-
-public class user {
-
-	String name;
-	int money;
-
-	public user(String name) {
-		this.name = name;
-		this.money = 0;
-	}
-
-	public int getMoney() {
-		return money;
-	}
-
-	public void setMoney(int money) {
-		this.money = money;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
->>>>>>> origin/main
 }

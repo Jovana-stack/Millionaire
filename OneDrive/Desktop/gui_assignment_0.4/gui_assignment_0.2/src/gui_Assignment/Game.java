@@ -7,15 +7,12 @@ package gui_Assignment;
 import java.awt.Graphics;
 
 import gamestates.*;
-<<<<<<< HEAD
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
-=======
->>>>>>> origin/main
 
 public class Game implements Runnable {
 	Frame gf;
@@ -31,7 +28,6 @@ public class Game implements Runnable {
 	// public final static int UNIT_SIZE = 25;
 
 	public user user;
-<<<<<<< HEAD
        
 
 	public final static int framewidth = 900;
@@ -45,15 +41,6 @@ public class Game implements Runnable {
 
 	Game() throws IOException {
                 importimages();
-=======
-
-	public final static int framewidth = 900;
-	public final static int framehight = 600;
-
-	private Thread gameThread;
-
-	Game() {
->>>>>>> origin/main
                 this.continueoption = new continueoption(this);
 		this.menu = new menu(this);
 		this.playing = new playing(this);
@@ -62,17 +49,11 @@ public class Game implements Runnable {
                 this.fiftyfifty = new fiftyfifty(this);
 		gp = new Panel(this);
 		gf = new Frame(gp);
-<<<<<<< HEAD
                 
                 user = new user();
 		startGameLoop();
 
 		
-=======
-		startGameLoop();
-
-		this.user = new user("tim");// test needs to be removed is temp
->>>>>>> origin/main
 	}
 
 	private void startGameLoop() {
@@ -168,19 +149,11 @@ public class Game implements Runnable {
 			deltaF += (currentTime - previousTime) / timePerFrame;
 			previousTime = currentTime;
 
-<<<<<<< HEAD
                            if (deltaU >= 1) {
 			// update();
 			// updates++;
 			// deltaU--;
 			 }
-=======
-			// if (deltaU >= 1) {
-			// update();
-			// updates++;
-			// deltaU--;
-			// }
->>>>>>> origin/main
 
 			if (deltaF >= 1) {
 
@@ -193,11 +166,7 @@ public class Game implements Runnable {
 				lastCheck = System.currentTimeMillis();
 				System.out.println("FPS: " + frames);
 				System.out.println(Gamestate.state);
-<<<<<<< HEAD
 				System.out.println("money: " + user.getMoney());
-=======
-				System.out.println("money: " + user.money);
->>>>>>> origin/main
 
 				frames = 0;
 				updates = 0;
@@ -206,7 +175,6 @@ public class Game implements Runnable {
 		}
 
 	}
-<<<<<<< HEAD
         
         private void importimages(){
              // Specify the file path to the image you want to import
@@ -229,7 +197,5 @@ public class Game implements Runnable {
         public BufferedImage getGameDefaultBackRound(){
             return  this.gameDefaultBackRound;
         }
-=======
->>>>>>> origin/main
 
 }

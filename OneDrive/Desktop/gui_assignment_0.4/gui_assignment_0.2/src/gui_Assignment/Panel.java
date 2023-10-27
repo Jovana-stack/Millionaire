@@ -21,10 +21,6 @@ public class Panel extends JPanel {
 		this.setPreferredSize(new Dimension(framewidth, framehight));
 		this.mouseInputs = new MouseInput(this);
 		addMouseListener(mouseInputs);
-<<<<<<< HEAD
-                addMouseMotionListener(mouseInputs);
-=======
->>>>>>> origin/main
 	}
 
 	public Game getGame() {
